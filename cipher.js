@@ -18,11 +18,11 @@ function calculateRelativeShift(charCode, shift) {
 
     if ((charCode + actualShift) > charRange.max) {
 
-        relativeShift = (charRange.min + actualShift - charRange.max - 1)
+        const relativeShift = (charRange.min + actualShift - charRange.max - 1)
         return relativeShift
     } else if ((charCode + actualShift) < charRange.min) {
 
-        relativeShift =  (-charRange.min + actualShift + charRange.max + 1)
+        const relativeShift = (-charRange.min + actualShift + charRange.max + 1)
         return relativeShift
     }
     return actualShift

@@ -1,8 +1,0 @@
-{
-  "name": "caesar-cipher-cli",
-  "version": "1.0.0",
-  "description": "node js cli example",
-  "main": "index.js",
-  "author": "Nikita Belyakov",
-  "license": "ISC"
-}

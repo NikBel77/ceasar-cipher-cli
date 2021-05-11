@@ -1,5 +1,5 @@
 const CLI = require('./CLI')
-const { pipeline } = require('stream/promises')
+const { pipeline } = require('stream')
 const streams = require('./streams')
 const validateArguments = require('./validate')
 
@@ -24,5 +24,9 @@ pipeline(
     readStream,
     transformStream,
     writeStream,
+    (err) => {
+        if(err) {
+            process.stderr.write(err)
+        }
+    }
 )
-.catch((err) => process.stderr.write(err))
